@@ -1,6 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
+        <script>
+  window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = "Are you sure you want to close?";
+
+    e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
+    return confirmationMessage;              // Gecko, WebKit, Chrome <34
+  });
+</script>
         <title>Clumsy Bird</title>
         <link rel="apple-touch-icon-precomposed" href="data/img/touch-icon-iphone.png"/>
         <link rel="apple-touch-icon-precomposed" sizes="120x120" href="data/img/touch-icon-iphone-retina.png"/>
