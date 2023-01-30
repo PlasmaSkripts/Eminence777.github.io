@@ -5,6 +5,14 @@
 <!-- Mirrored from territorial.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jan 2023 02:24:04 GMT -->
 <head>
   <meta charset="utf-8" />
+  <script>
+    window.addEventListener("beforeunload", function (e) {
+      var confirmationMessage = "Are you sure you want to close?";
+
+       e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
+       return confirmationMessage;              // Gecko, WebKit, Chrome <34
+    });
+  </script>
   <title>Territorial.io</title>
   <meta name="description" content="Territorial.io - The Art of Conquest">
   <meta name="keywords"
