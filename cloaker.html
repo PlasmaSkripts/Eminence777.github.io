@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Link Cloaker</title>
+</head>
+<body>
+<button onclick="launchSite()">Launch Cloaked Tab</button>
+  <p>Stop GoGuardian from tracking your links!</p>
+  <textarea placeholder="Website's URL..."></textarea>
+ 
+<script>
+function launchSite {
+var contentStore = document.getElementById("textbox").value;
+var win = window.open()
+var url = textbox.value
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+  
+window.addEventListener("beforeunload", function (e) {
+  var confirmationMessage = "Are you sure you want to close?";
+
+  e.returnValue = confirmationMessage;
+  return confirmationMessage; 
+}
+</script>
+</body>
+</html>
