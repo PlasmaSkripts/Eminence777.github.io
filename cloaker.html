@@ -1,29 +1,43 @@
-<html>
-<head>
-  <title>Link Cloaker</title>
+`<head>
+<title>Link Cloaker</title>
+<style>
+.button {
+  background-color: #656e9a;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
-<button onclick="launchSite()">Launch Cloaked Tab</button>
+<button class="button" onclick="launchSite()">Launch Cloaked Tab</button>
   <p>Stop GoGuardian from tracking your links!</p>
-  <textarea id="textbox" placeholder="Website's URL..."></textarea>
+  <textarea id="textbox" placeholder="Insert url to cloak."></textarea>
  
 <script>
-function launchSite {
-var contentStore = document.getElementById("textbox").value;
-var win = window.open()
-var url = textbox.value
-var iframe = win.document.createElement('iframe')
+function launchSite() {
+var contentStore = 
+document.getElementById("textbox").value;
+var win = window.open();
+var url = textbox.value;
+var iframe = win.document.createElement('iframe');
 iframe.style.width = "100%";
 iframe.style.height = "100%";
 iframe.style.border = "none";
-iframe.src = url
-win.document.body.appendChild(iframe)
-  
-window.addEventListener("beforeunload", function (x) {
-  var confirmationMessage = "Are you sure you want to close?";
-
- x.returnValue = confirmationMessage
+iframe.src = url;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://eminence777.github.io/goguardian-bypass.js";
+win.document.head.appendChild(script);
+win.document.body.appendChild(iframe);
 }
 </script>
-</body>
-</html>
+</body>`
