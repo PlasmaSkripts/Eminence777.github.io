@@ -82,15 +82,17 @@
             css.rel = "stylesheet";
             css.type = "text/css";
             css.href = "https://eminence777.github.io/cloak.css";
+            
+            
+            var title = win.document.createElement('title');
+            title.innerHTML = titleurl;
+            iframe.src = url
+            
             win.document.head.appendChild(css);
             win.document.head.appendChild(link);
             win.document.body.appendChild(iframe);
             win.document.head.appendChild(script);
             win.document.head.appendChild(title);
-
-            var title = win.document.createElement('title');
-            title.innerHTML = titleurl;
-            iframe.src = url
         }
     </script>
 </body>
