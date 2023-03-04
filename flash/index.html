@@ -1,12 +1,27 @@
-<head>
-  <script src="ruffle.js"></script>
-  <style>
-    ruffle-object {
-      margin: 0px;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <ruffle-object id="flash" data-width="100%" data-height="100%" type="application/x-shockwave-flash" data="games/bloons2.swf"><param name="wmode" value="direct"><param name="menu" value="false"><param name="quality" value="high"><param name="allowNetworking" value="internal"><param name="AllowScriptAccess" value="never"></ruffle-object>
-</body>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset='utf8'>
+    </head>
+    <body>
+<div id="container"> </div>
+
+<script src="ruffle.js"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container"); 
+            container.appendChild(player);
+            player.load({
+                url: "bloon2.swf", 
+                backgroundColor: "#000", 
+             });
+            player.style.width = "450px"; 
+            player.style.height = "450px";
+        });
+    </script>
+        </script>
+    </body>
+</html>
