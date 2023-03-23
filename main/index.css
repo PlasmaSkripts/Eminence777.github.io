@@ -1,0 +1,97 @@
+.index-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #171616;
+}
+.index-div {
+  color: white;
+  width: 1124px;
+  height: 155px;
+  font-size: 128px;
+  margin-top: var(--dl-space-space-unit);
+  text-align: center;
+  font-family: Inter;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-left: var(--dl-space-space-sixunits);
+  margin-right: var(--dl-space-space-sixunits);
+  margin-bottom: 0px;
+}
+.index-container1 {
+  width: 100%;
+  height: 174px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.index-button {
+  width: 264px;
+  height: 61px;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  font-size: 35px;
+  text-align: right;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-halfunit);
+  border-radius: var(--dl-radius-radius-radius8);
+  padding-right: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+  background-color: rgb(65, 61, 61);
+}
+.index-icon {
+  fill: #D9D9D9;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  margin-left: var(--dl-space-space-halfunit);
+}
+.index-text {
+  color: #ffffff;
+  font-size: 28px;
+  align-self: center;
+  text-align: left;
+}
+.index-button1 {
+  width: 230px;
+  height: 61px;
+  display: flex;
+  position: relative;
+  font-size: 35px;
+  align-self: center;
+  box-sizing: border-box;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-left: -10px;
+  border-radius: var(--dl-radius-radius-radius8);
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(65, 61, 61);
+}
+.index-icon2 {
+  top: 14px;
+  fill: #D9D9D9;
+  left: 17px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  align-self: center;
+}
+.index-text1 {
+  top: 13px;
+  left: 90px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-size: 28px;
+  align-self: center;
+  text-align: center;
+}
