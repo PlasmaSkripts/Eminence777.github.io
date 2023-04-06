@@ -8,6 +8,19 @@
             font-family: "Golos Text", sans-serif;
             font-size: 16px;
             color: white;
+            transition-delay: 0s;
+            animation: backgroundbodycolor 10s paused infinite;
+        }
+        body:hover {
+            transition-delay: 3s;
+            animation-play-state: running;
+        }
+        @keyframes backgroundbodycolor {
+            0% {background-color: #2d2e2b;}
+            25%{background-color:#393b35;}
+            50%{background-color:#362d2d;}
+            75%{background-color:#3a4945;}
+            100% {background-color: #2d2e2b;}
         }
         
         button {
@@ -22,12 +35,22 @@
             font-size: 16px;
             margin: 20px auto 20px auto;
             cursor: pointer;
+            
         }
-        
+        button:hover {
+           background-color: rgba(233, 74, 74, 0.644);
+            padding: 17px 37px;
+            top: 30px;
+        }
+
         p {
             text-align: center;
             margin-top: 50px;
             padding: 10px;
+        }
+        p:hover {
+        color: rgba(255, 255, 255, 0.075);
+        user-select: none;
         }
         
         textarea {
@@ -40,10 +63,20 @@
             box-sizing: border-box;
             padding: 10px;
             display: flex;
+            user-select: var(background-color);
             justify-content: center;
             resize: none;
         }
-        
+        textarea:hover {
+            background-color: #5d8dc4;
+        }
+        textarea:focus {
+            background-color: #5d8dc4;
+        }
+        textarea:focus:hover {
+            background-color: #3f6fa7;
+        }
+
         ::placeholder {
             color: white;
         }
@@ -56,7 +89,8 @@
     <textarea id="textbox-icon" placeholder="Insert website icon..."></textarea>
     <button onclick="launchSite()">Launch Cloaked Tab</button>
     <script>
-        function launchSite() {
+
+function launchSite() {
             var url = document.getElementById("textbox").value;
             var titleurl = document.getElementById("textbox-title").value;
             var titleicon = document.getElementById("textbox-icon").value;
