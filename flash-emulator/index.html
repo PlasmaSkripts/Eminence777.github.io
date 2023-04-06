@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FLASH</title>
+    <style>
+      body {
+        background-color: #1c1c1c;
+        color: #ffffff;
+      }
+
+      input[type="file"] {
+        background-color: lavender;
+        color: #333333;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      }
+
+      input[type="file"]:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+
+      input[type="file"]::before {
+        content: 'Select a flash file to load...';
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flash-container"></div>
+    <input type="file" id="file-input">
+    <script src="https://cdn.jsdelivr.net/npm/@rufflejs/ruffle@latest/dist/ruffle.js"></script>
+    <script>
+      const flashContainer = document.getElementById('flash-container');
+      const fileInput = document.getElementById('file-input');
+
+      fileInput.addEventListener('change', async (event) => {
+        const file = event.target.files[0];
+        const rufflePlayer = await RufflePlayer.newest();
+        const swfBlob = new Blob([file], { type: 'application/x-shockwave-flash' });
+        const swfUrl = URL.createObjectURL(swfBlob);
+        rufflePlayer.load(swfUrl, { height: '100%', width: '100%' });
+        flashContainer.appendChild(rufflePlayer);
+      });
+    </script>
+  </body>
+</html>
